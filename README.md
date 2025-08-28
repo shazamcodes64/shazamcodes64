@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @shazamcodes64
 - 👀 I’m interested in learning coding
-- 🌱 I’m currently learning python
+- 🌱 I’m currently learning C++
+- 🥳 I'm Good with Python
 - 💞️ I’m looking to collaborate on projects 
 - 📫 How to reach me hheheheh
 - ⚡ Fun fact: I AM THE CODE
