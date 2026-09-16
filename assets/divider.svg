@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="32" viewBox="0 0 1000 32">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left flat line -->
+  <line x1="0" y1="16" x2="320" y2="16" stroke="#00ff46" stroke-width="0.6" opacity="0.25"/>
+
+  <!-- Signal pulse waveform center -->
+  <polyline
+    points="320,16 348,16 356,4 364,28 372,4 380,28 388,16 400,16 408,10 416,22 424,10 432,22 440,16 460,16 468,8 476,24 484,8 492,24 500,16 508,16 516,10 524,22 532,10 540,22 548,16 560,16 568,4 576,28 584,4 592,28 600,16 612,16 620,10 628,22 636,10 644,22 652,16 680,16"
+    fill="none" stroke="#00ff46" stroke-width="1" opacity="0.5" filter="url(#glow)"/>
+
+  <!-- Right flat line -->
+  <line x1="680" y1="16" x2="1000" y2="16" stroke="#00ff46" stroke-width="0.6" opacity="0.25"/>
+
+  <!-- Animated traveling dot on the line -->
+  <circle r="2.5" fill="#00ff46" opacity="0.9" filter="url(#glow)">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#wavepath"/>
+    </animateMotion>
+  </circle>
+  <path id="wavepath" d="M0,16 L320,16 L348,16 L356,4 L364,28 L372,4 L380,28 L388,16 L680,16 L1000,16" fill="none"/>
+</svg>

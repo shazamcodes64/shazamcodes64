@@ -1,221 +1,200 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
   <defs>
     <style>
-      .bg   { fill: #0d0e1a; }
-      .panel{ fill: #12132a; stroke: #1e2048; stroke-width: 1.5; }
-      .cy   { fill: #22d3ee; }
-      .mg   { fill: #d946ef; }
-      .pk   { fill: #f43f5e; }
-      .gn   { fill: #22c55e; }
-      .wh   { fill: #e5e7eb; }
-      .cl   { fill: #1a1b33; }
-      .dim  { fill: #0f1020; }
-      .mono { font-family: 'Courier New', monospace; }
-      .lbl  { fill: #7dd3fc; font-size: 10px; }
-      .val  { fill: #a5b4fc; font-size: 18px; font-weight: bold; }
-      .sm   { fill: #4a5568; font-size: 9px; }
-      .smg  { fill: #22c55e; font-size: 9px; }
-      .clbx { fill: none; stroke: #22c55e; stroke-width: 1; stroke-dasharray: 3,2; }
-      .ttl  { fill: #22d3ee; font-size: 14px; font-weight: bold; }
-      .dayl { fill: #4a5568; font-size: 9px; }
+      .mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
+      .lbl  { fill: #00cc38; font-size: 10px; }
+      .val  { fill: #00ff46; font-size: 18px; font-weight: bold; }
+      .sm   { fill: #2a6636; font-size: 9px; }
+      .smg  { fill: #00cc38; font-size: 9px; }
+      .ttl  { fill: #00ff46; font-size: 13px; font-weight: bold; }
+      .dayl { fill: #1a4428; font-size: 9px; }
+      .clbx { fill: none; stroke: #00ff46; stroke-width: 0.8; stroke-dasharray: 3,2; opacity: 0.7; }
 
-      /* scanner sweep line animation */
-      .scanner {
-        fill: none;
-        stroke: url(#scanGrad);
-        stroke-width: 2;
-        opacity: 0.85;
-      }
-      @keyframes sweep {
-        0%   { transform: translateX(-20px); opacity: 0; }
-        5%   { opacity: 1; }
-        95%  { opacity: 1; }
-        100% { transform: translateX(760px); opacity: 0; }
-      }
-      .scanner { animation: sweep 4s linear infinite; }
+      /* cell fills: dim / low / med / high / peak */
+      .c0 { fill: #050f07; }
+      .c1 { fill: #0a2410; }
+      .c2 { fill: #0f4020; }
+      .c3 { fill: #1a7a38; }
+      .c4 { fill: #00ff46; }
 
-      /* corner bracket blink */
-      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+      /* running light border */
+      @keyframes runlight { to { stroke-dashoffset: -2960; } }
+      .runborder {
+        fill: none; stroke: #00ff46; stroke-width: 1;
+        stroke-dasharray: 60 2900; stroke-dashoffset: 0;
+        animation: runlight 4s linear infinite; opacity: 0.5;
+      }
+
+      /* scanner sweep */
+      @keyframes sweep { 0%{transform:translateX(0)} 100%{transform:translateX(760px)} }
+      .scanner { animation: sweep 5s linear infinite; opacity: 0; }
+      @keyframes scanvis { 0%,100%{opacity:0} 5%,90%{opacity:1} }
+      .scanner { animation: sweep 5s linear infinite, scanvis 5s linear infinite; }
+
+      /* blink */
+      @keyframes blink { 0%,100%{opacity:0.6} 50%{opacity:0.15} }
       .blink { animation: blink 1.4s ease-in-out infinite; }
 
-      /* pulse dot */
-      @keyframes pulse { 0%,100%{r:4;opacity:1} 50%{r:6;opacity:0.5} }
+      /* pulse */
+      @keyframes pulse { 0%,100%{opacity:1;r:3.5} 50%{opacity:0.4;r:5} }
       .pulse { animation: pulse 1.2s ease-in-out infinite; }
 
-      /* console text scroll */
+      /* console lines */
       @keyframes fadein { from{opacity:0} to{opacity:1} }
-      .con1 { animation: fadein 0.4s 0.2s both; }
-      .con2 { animation: fadein 0.4s 1.0s both; }
-      .con3 { animation: fadein 0.4s 1.8s both; }
-      .con4 { animation: fadein 0.4s 2.6s both; }
-
-      /* running light on border */
-      @keyframes runlight {
-        0%   { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: -2960; }
-      }
-      .runborder {
-        fill: none;
-        stroke: #22d3ee;
-        stroke-width: 1.5;
-        stroke-dasharray: 40 2920;
-        stroke-dashoffset: 0;
-        animation: runlight 3s linear infinite;
-        opacity: 0.7;
-      }
+      .c1t { animation: fadein 0.3s 0.3s both; }
+      .c2t { animation: fadein 0.3s 1.1s both; }
+      .c3t { animation: fadein 0.3s 1.9s both; }
+      .c4t { animation: fadein 0.3s 2.7s both; }
     </style>
 
-    <!-- scanner gradient: leading bright edge, trailing fade -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
     <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset="60%"  stop-color="#22d3ee" stop-opacity="0.15"/>
-      <stop offset="90%"  stop-color="#22d3ee" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="#00ff46" stop-opacity="0"/>
+      <stop offset="70%"  stop-color="#00ff46" stop-opacity="0.08"/>
+      <stop offset="95%"  stop-color="#00ff46" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#aaffbb" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- glow filter for header text -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
+    <pattern id="scanlines" x="0" y="0" width="1000" height="3" patternUnits="userSpaceOnUse">
+      <rect width="1000" height="1.5" fill="rgba(0,0,0,0.2)"/>
+    </pattern>
 
-  <!-- Background -->
-  <rect class="bg" width="1000" height="320" rx="10"/>
-  <rect class="panel" x="12" y="12" width="976" height="296" rx="8"/>
-
-  <!-- Running light border -->
-  <rect class="runborder" x="12" y="12" width="976" height="296" rx="8"/>
-
-  <!-- Corner brackets -->
-  <g stroke="#22d3ee" stroke-width="1.5" fill="none" class="blink">
-    <path d="M20,20 L20,34 M20,20 L34,20"/>
-    <path d="M980,20 L966,20 M980,20 L980,34"/>
-    <path d="M20,300 L20,286 M20,300 L34,300"/>
-    <path d="M980,300 L966,300 M980,300 L980,286"/>
-  </g>
-
-  <!-- Header row -->
-  <text x="48" y="40" class="mono ttl" filter="url(#glow)">TARGET_DETECTION_HUD</text>
-  <text x="48" y="54" class="mono sm">SENSOR_ARRAY: COMMIT_LOGS | CAM_01</text>
-
-  <circle cx="920" cy="36" r="4" class="gn pulse"/>
-  <text x="932" y="40" class="mono smg">SYS_ACTIVE</text>
-  <text x="880" y="54" class="mono sm">TRACKER_LOCK: OK</text>
-
-  <line x1="36" y1="64" x2="964" y2="64" stroke="#1e2048" stroke-width="1"/>
-
-  <!-- Left stat panel -->
-  <text x="48" y="82" class="mono lbl">ROIs ACTIVE</text>
-  <text x="48" y="100" class="mono val mg">06</text>
-
-  <text x="48" y="122" class="mono lbl">TOTAL_COMMITS</text>
-  <text x="48" y="140" class="mono val cy">538</text>
-
-  <text x="48" y="162" class="mono lbl">SCAN_STEPS</text>
-  <text x="48" y="180" class="mono val wh">53 x 7 px</text>
-
-  <!-- Day labels -->
-  <text x="168" y="102" class="mono dayl">Mon</text>
-  <text x="168" y="134" class="mono dayl">Wed</text>
-  <text x="168" y="166" class="mono dayl">Fri</text>
-
-  <!-- Vertical tick line -->
-  <line x1="164" y1="72" x2="164" y2="192" stroke="#1e2048" stroke-width="1"/>
-
-  <!-- Month labels -->
-  <text x="200" y="74" class="mono sm">Sep  Oct  Nov  Dec  Jan  Feb  Mar  Apr  May  Jun  Jul  Aug</text>
-
-  <!-- ── CLUSTER 1: Sep (dense) ── -->
-  <g transform="translate(200, 82)">
-    <rect class="clbx" x="-3" y="-2" width="58" height="84" rx="3"/>
-    <text x="0" y="-8" class="mono smg">COMMIT_CLUSTER 99.8%</text>
-    <rect class="cy"  x="0"  y="0"  width="11" height="11"/><rect class="cl" x="14" y="0"  width="11" height="11"/><rect class="mg" x="28" y="0"  width="11" height="11"/><rect class="pk" x="42" y="0"  width="11" height="11"/>
-    <rect class="wh"  x="0"  y="14" width="11" height="11"/><rect class="cl" x="14" y="14" width="11" height="11"/><rect class="cy" x="28" y="14" width="11" height="11"/><rect class="mg" x="42" y="14" width="11" height="11"/>
-    <rect class="cl"  x="0"  y="28" width="11" height="11"/><rect class="pk" x="14" y="28" width="11" height="11"/><rect class="wh" x="28" y="28" width="11" height="11"/><rect class="cy" x="42" y="28" width="11" height="11"/>
-    <rect class="cy"  x="0"  y="42" width="11" height="11"/><rect class="mg" x="14" y="42" width="11" height="11"/><rect class="cl" x="28" y="42" width="11" height="11"/><rect class="wh" x="42" y="42" width="11" height="11"/>
-    <rect class="pk"  x="0"  y="56" width="11" height="11"/><rect class="cl" x="14" y="56" width="11" height="11"/><rect class="cy" x="28" y="56" width="11" height="11"/><rect class="mg" x="42" y="56" width="11" height="11"/>
-    <rect class="wh"  x="0"  y="70" width="11" height="11"/><rect class="cy" x="14" y="70" width="11" height="11"/><rect class="mg" x="28" y="70" width="11" height="11"/><rect class="cl" x="42" y="70" width="11" height="11"/>
-  </g>
-
-  <!-- Sparse months: Oct–Mar -->
-  <g transform="translate(268, 82)">
-    <rect class="cl" x="10"  y="0"  width="11" height="11"/>
-    <rect class="cl" x="40"  y="14" width="11" height="11"/>
-    <rect class="cy" x="70"  y="28" width="11" height="11"/>
-    <rect class="cl" x="100" y="0"  width="11" height="11"/>
-    <rect class="cl" x="130" y="42" width="11" height="11"/>
-    <rect class="cl" x="160" y="14" width="11" height="11"/>
-    <rect class="mg" x="190" y="0"  width="11" height="11"/>
-    <rect class="cl" x="220" y="56" width="11" height="11"/>
-    <rect class="cl" x="250" y="28" width="11" height="11"/>
-  </g>
-
-  <!-- ── CLUSTER 2: Apr–May ── -->
-  <g transform="translate(530, 82)">
-    <rect class="clbx" x="-3" y="10" width="58" height="72" rx="3"/>
-    <text x="0" y="6" class="mono smg">COMMIT_CLUSTER 96.4%</text>
-    <rect class="cy"  x="0"  y="14" width="11" height="11"/><rect class="cl" x="14" y="14" width="11" height="11"/><rect class="mg" x="28" y="14" width="11" height="11"/><rect class="pk" x="42" y="14" width="11" height="11"/>
-    <rect class="wh"  x="0"  y="28" width="11" height="11"/><rect class="cy" x="14" y="28" width="11" height="11"/><rect class="cl" x="28" y="28" width="11" height="11"/><rect class="mg" x="42" y="28" width="11" height="11"/>
-    <rect class="cl"  x="0"  y="42" width="11" height="11"/><rect class="pk" x="14" y="42" width="11" height="11"/><rect class="cy" x="28" y="42" width="11" height="11"/><rect class="wh" x="42" y="42" width="11" height="11"/>
-    <rect class="mg"  x="0"  y="56" width="11" height="11"/><rect class="cl" x="14" y="56" width="11" height="11"/><rect class="pk" x="28" y="56" width="11" height="11"/><rect class="cy" x="42" y="56" width="11" height="11"/>
-    <rect class="cy"  x="0"  y="70" width="11" height="11"/><rect class="wh" x="14" y="70" width="11" height="11"/><rect class="mg" x="28" y="70" width="11" height="11"/><rect class="cl" x="42" y="70" width="11" height="11"/>
-  </g>
-
-  <!-- ── CLUSTER 3: Jun–Jul ── -->
-  <g transform="translate(612, 82)">
-    <rect class="clbx" x="-3" y="-2" width="72" height="84" rx="3"/>
-    <text x="0" y="-8" class="mono smg">COMMIT_CLUSTER 96.3%</text>
-    <rect class="mg"  x="0"  y="0"  width="11" height="11"/><rect class="cy" x="14" y="0"  width="11" height="11"/><rect class="wh" x="28" y="0"  width="11" height="11"/><rect class="pk" x="42" y="0"  width="11" height="11"/><rect class="cy" x="56" y="0"  width="11" height="11"/>
-    <rect class="cl"  x="0"  y="14" width="11" height="11"/><rect class="wh" x="14" y="14" width="11" height="11"/><rect class="mg" x="28" y="14" width="11" height="11"/><rect class="cy" x="42" y="14" width="11" height="11"/><rect class="cl" x="56" y="14" width="11" height="11"/>
-    <rect class="cy"  x="0"  y="28" width="11" height="11"/><rect class="pk" x="14" y="28" width="11" height="11"/><rect class="cl" x="28" y="28" width="11" height="11"/><rect class="wh" x="42" y="28" width="11" height="11"/><rect class="mg" x="56" y="28" width="11" height="11"/>
-    <rect class="wh"  x="0"  y="42" width="11" height="11"/><rect class="cl" x="14" y="42" width="11" height="11"/><rect class="cy" x="28" y="42" width="11" height="11"/><rect class="mg" x="42" y="42" width="11" height="11"/><rect class="pk" x="56" y="42" width="11" height="11"/>
-    <rect class="cy"  x="0"  y="56" width="11" height="11"/><rect class="mg" x="14" y="56" width="11" height="11"/><rect class="wh" x="28" y="56" width="11" height="11"/><rect class="cl" x="42" y="56" width="11" height="11"/><rect class="cy" x="56" y="56" width="11" height="11"/>
-    <rect class="pk"  x="0"  y="70" width="11" height="11"/><rect class="cy" x="14" y="70" width="11" height="11"/><rect class="mg" x="28" y="70" width="11" height="11"/><rect class="wh" x="42" y="70" width="11" height="11"/><rect class="cl" x="56" y="70" width="11" height="11"/>
-  </g>
-
-  <!-- ── CLUSTER 4: Aug (peak) ── -->
-  <g transform="translate(706, 82)">
-    <rect class="clbx" x="-3" y="-2" width="58" height="84" rx="3"/>
-    <text x="0" y="-8" class="mono smg">COMMIT_CLUSTER 95.9%</text>
-    <rect class="pk"  x="0"  y="0"  width="11" height="11"/><rect class="cy" x="14" y="0"  width="11" height="11"/><rect class="mg" x="28" y="0"  width="11" height="11"/><rect class="wh" x="42" y="0"  width="11" height="11"/>
-    <rect class="cy"  x="0"  y="14" width="11" height="11"/><rect class="mg" x="14" y="14" width="11" height="11"/><rect class="pk" x="28" y="14" width="11" height="11"/><rect class="cy" x="42" y="14" width="11" height="11"/>
-    <rect class="wh"  x="0"  y="28" width="11" height="11"/><rect class="pk" x="14" y="28" width="11" height="11"/><rect class="cy" x="28" y="28" width="11" height="11"/><rect class="mg" x="42" y="28" width="11" height="11"/>
-    <rect class="mg"  x="0"  y="42" width="11" height="11"/><rect class="cy" x="14" y="42" width="11" height="11"/><rect class="wh" x="28" y="42" width="11" height="11"/><rect class="pk" x="42" y="42" width="11" height="11"/>
-    <rect class="cy"  x="0"  y="56" width="11" height="11"/><rect class="wh" x="14" y="56" width="11" height="11"/><rect class="mg" x="28" y="56" width="11" height="11"/><rect class="cy" x="42" y="56" width="11" height="11"/>
-    <rect class="pk"  x="0"  y="70" width="11" height="11"/><rect class="mg" x="14" y="70" width="11" height="11"/><rect class="cy" x="28" y="70" width="11" height="11"/><rect class="wh" x="42" y="70" width="11" height="11"/>
-  </g>
-
-  <!-- Scanner sweep line (animates across the grid area) -->
-  <g clip-path="url(#gridClip)">
-    <line class="scanner" x1="200" y1="76" x2="200" y2="192" stroke-width="2"/>
-  </g>
-  <defs>
     <clipPath id="gridClip">
-      <rect x="196" y="68" width="768" height="128"/>
+      <rect x="196" y="66" width="772" height="130"/>
     </clipPath>
   </defs>
 
-  <!-- Console panel -->
-  <rect x="36" y="202" width="480" height="60" rx="4" fill="#080912" stroke="#1e2048" stroke-width="1"/>
-  <text x="48" y="218" class="mono smg con1">&gt;&gt; FRAME: [53x7] | TARGET: shazamcodes64</text>
-  <text x="48" y="231" class="mono smg con2">&gt;&gt; CCL_ENGINE: DETECTED 13 RAW CLUSTERS</text>
-  <text x="48" y="244" class="mono smg con3">&gt;&gt; YOLOv8 COMMIT; STRETCHING 6 ROIs</text>
-  <text x="48" y="257" class="mono smg con4">&gt;&gt; SCANNING COMPLETED SUCCESSFULLY.</text>
+  <!-- Background -->
+  <rect width="1000" height="320" rx="8" fill="#060e08"/>
+  <rect width="1000" height="320" rx="8" fill="url(#scanlines)"/>
+  <rect width="1000" height="320" rx="8" fill="none" stroke="#0a2010" stroke-width="1.5"/>
 
-  <!-- Intensity legend -->
-  <text x="560" y="218" class="mono sm">INTENSITY_MAP:</text>
-  <rect x="560" y="226" width="9" height="9" class="dim" stroke="#2a2c55" stroke-width="0.5"/>
-  <rect x="573" y="226" width="9" height="9" fill="#22d3ee" opacity="0.35"/>
-  <rect x="586" y="226" width="9" height="9" fill="#22d3ee" opacity="0.7"/>
-  <rect x="599" y="226" width="9" height="9" class="mg"/>
-  <rect x="612" y="226" width="9" height="9" class="pk"/>
-  <text x="624" y="234" class="mono sm">0  1-3  3-5  6-8  9+</text>
+  <!-- Running light border -->
+  <rect class="runborder" x="4" y="4" width="992" height="312" rx="7"/>
 
-  <rect x="560" y="244" width="9" height="7" fill="#22c55e" opacity="0.3" stroke="#22c55e" stroke-width="0.5"/>
-  <text x="574" y="250" class="mono smg">COMMIT_CLUSTER</text>
-  <rect x="680" y="244" width="9" height="7" class="cy"/>
-  <text x="694" y="250" class="mono sm" fill="#22d3ee">DEV_STREAK</text>
-  <rect x="770" y="244" width="9" height="7" class="pk"/>
-  <text x="784" y="250" class="mono sm" fill="#f43f5e">PEAK_BURST</text>
+  <!-- Corner brackets -->
+  <g stroke="#00ff46" stroke-width="1.2" fill="none" class="blink">
+    <path d="M14,14 L14,30 M14,14 L30,14"/>
+    <path d="M986,14 L970,14 M986,14 L986,30"/>
+    <path d="M14,306 L14,290 M14,306 L30,306"/>
+    <path d="M986,306 L970,306 M986,306 L986,290"/>
+  </g>
+
+  <!-- Header -->
+  <text x="34" y="38" class="mono ttl" filter="url(#glow)">TARGET_DETECTION_HUD</text>
+  <text x="34" y="52" class="mono sm">SENSOR_ARRAY: COMMIT_LOGS | CAM_01 | shazamcodes64</text>
+  <circle cx="930" cy="34" r="3.5" fill="#00ff46" class="pulse" filter="url(#glow)"/>
+  <text x="940" y="38" class="mono smg">SYS_ACTIVE</text>
+  <text x="886" y="52" class="mono sm">TRACKER_LOCK: OK</text>
+  <line x1="14" y1="60" x2="986" y2="60" stroke="#00ff46" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Left stats -->
+  <text x="34" y="82"  class="mono lbl">ROIs ACTIVE</text>
+  <text x="34" y="100" class="mono val" filter="url(#glow)">06</text>
+  <text x="34" y="120" class="mono lbl">TOTAL_COMMITS</text>
+  <text x="34" y="138" class="mono val" filter="url(#glow)">538</text>
+  <text x="34" y="158" class="mono lbl">SCAN_STEPS</text>
+  <text x="34" y="176" class="mono val" filter="url(#glow)">53×7 px</text>
+
+  <!-- Day labels -->
+  <line x1="166" y1="66" x2="166" y2="196" stroke="#00ff46" stroke-width="0.5" opacity="0.15"/>
+  <text x="170" y="98"  class="mono dayl">Mon</text>
+  <text x="170" y="130" class="mono dayl">Wed</text>
+  <text x="170" y="162" class="mono dayl">Fri</text>
+
+  <!-- Month labels -->
+  <text x="196" y="72" class="mono sm">Sep  Oct  Nov  Dec  Jan  Feb  Mar  Apr  May  Jun  Jul  Aug</text>
+
+  <!-- CLUSTER 1: Sep — dense -->
+  <g transform="translate(196,78)">
+    <rect class="clbx" x="-2" y="-1" width="56" height="98" rx="2"/>
+    <text x="0" y="-7" class="mono smg" font-size="8">COMMIT_CLUSTER 99.8%</text>
+    <rect class="c4" x="0"  y="0"  width="10" height="10"/><rect class="c3" x="13" y="0"  width="10" height="10"/><rect class="c4" x="26" y="0"  width="10" height="10"/><rect class="c2" x="39" y="0"  width="10" height="10"/>
+    <rect class="c3" x="0"  y="13" width="10" height="10"/><rect class="c4" x="13" y="13" width="10" height="10"/><rect class="c2" x="26" y="13" width="10" height="10"/><rect class="c4" x="39" y="13" width="10" height="10"/>
+    <rect class="c2" x="0"  y="26" width="10" height="10"/><rect class="c3" x="13" y="26" width="10" height="10"/><rect class="c4" x="26" y="26" width="10" height="10"/><rect class="c3" x="39" y="26" width="10" height="10"/>
+    <rect class="c4" x="0"  y="39" width="10" height="10"/><rect class="c2" x="13" y="39" width="10" height="10"/><rect class="c3" x="26" y="39" width="10" height="10"/><rect class="c4" x="39" y="39" width="10" height="10"/>
+    <rect class="c3" x="0"  y="52" width="10" height="10"/><rect class="c4" x="13" y="52" width="10" height="10"/><rect class="c2" x="26" y="52" width="10" height="10"/><rect class="c3" x="39" y="52" width="10" height="10"/>
+    <rect class="c4" x="0"  y="65" width="10" height="10"/><rect class="c3" x="13" y="65" width="10" height="10"/><rect class="c4" x="26" y="65" width="10" height="10"/><rect class="c2" x="39" y="65" width="10" height="10"/>
+    <rect class="c2" x="0"  y="78" width="10" height="10"/><rect class="c4" x="13" y="78" width="10" height="10"/><rect class="c3" x="26" y="78" width="10" height="10"/><rect class="c4" x="39" y="78" width="10" height="10"/>
+  </g>
+
+  <!-- Sparse: Oct–Mar -->
+  <g transform="translate(260,78)">
+    <rect class="c1" x="12"  y="0"  width="10" height="10"/>
+    <rect class="c1" x="52"  y="26" width="10" height="10"/>
+    <rect class="c2" x="88"  y="13" width="10" height="10"/>
+    <rect class="c1" x="130" y="39" width="10" height="10"/>
+    <rect class="c1" x="168" y="0"  width="10" height="10"/>
+    <rect class="c2" x="210" y="52" width="10" height="10"/>
+    <rect class="c1" x="252" y="26" width="10" height="10"/>
+    <rect class="c1" x="280" y="13" width="10" height="10"/>
+  </g>
+
+  <!-- CLUSTER 2: Apr -->
+  <g transform="translate(554,78)">
+    <rect class="clbx" x="-2" y="12" width="56" height="72" rx="2"/>
+    <text x="0" y="8" class="mono smg" font-size="8">COMMIT_CLUSTER 96.4%</text>
+    <rect class="c3" x="0"  y="13" width="10" height="10"/><rect class="c4" x="13" y="13" width="10" height="10"/><rect class="c2" x="26" y="13" width="10" height="10"/><rect class="c3" x="39" y="13" width="10" height="10"/>
+    <rect class="c4" x="0"  y="26" width="10" height="10"/><rect class="c2" x="13" y="26" width="10" height="10"/><rect class="c4" x="26" y="26" width="10" height="10"/><rect class="c3" x="39" y="26" width="10" height="10"/>
+    <rect class="c2" x="0"  y="39" width="10" height="10"/><rect class="c4" x="13" y="39" width="10" height="10"/><rect class="c3" x="26" y="39" width="10" height="10"/><rect class="c4" x="39" y="39" width="10" height="10"/>
+    <rect class="c3" x="0"  y="52" width="10" height="10"/><rect class="c3" x="13" y="52" width="10" height="10"/><rect class="c4" x="26" y="52" width="10" height="10"/><rect class="c2" x="39" y="52" width="10" height="10"/>
+    <rect class="c4" x="0"  y="65" width="10" height="10"/><rect class="c2" x="13" y="65" width="10" height="10"/><rect class="c3" x="26" y="65" width="10" height="10"/><rect class="c4" x="39" y="65" width="10" height="10"/>
+  </g>
+
+  <!-- CLUSTER 3: Jun–Jul -->
+  <g transform="translate(634,78)">
+    <rect class="clbx" x="-2" y="-1" width="69" height="84" rx="2"/>
+    <text x="0" y="-7" class="mono smg" font-size="8">COMMIT_CLUSTER 96.3%</text>
+    <rect class="c4" x="0"  y="0"  width="10" height="10"/><rect class="c3" x="13" y="0"  width="10" height="10"/><rect class="c4" x="26" y="0"  width="10" height="10"/><rect class="c3" x="39" y="0"  width="10" height="10"/><rect class="c4" x="52" y="0"  width="10" height="10"/>
+    <rect class="c2" x="0"  y="13" width="10" height="10"/><rect class="c4" x="13" y="13" width="10" height="10"/><rect class="c3" x="26" y="13" width="10" height="10"/><rect class="c4" x="39" y="13" width="10" height="10"/><rect class="c2" x="52" y="13" width="10" height="10"/>
+    <rect class="c3" x="0"  y="26" width="10" height="10"/><rect class="c4" x="13" y="26" width="10" height="10"/><rect class="c4" x="26" y="26" width="10" height="10"/><rect class="c2" x="39" y="26" width="10" height="10"/><rect class="c3" x="52" y="26" width="10" height="10"/>
+    <rect class="c4" x="0"  y="39" width="10" height="10"/><rect class="c3" x="13" y="39" width="10" height="10"/><rect class="c4" x="26" y="39" width="10" height="10"/><rect class="c4" x="39" y="39" width="10" height="10"/><rect class="c3" x="52" y="39" width="10" height="10"/>
+    <rect class="c3" x="0"  y="52" width="10" height="10"/><rect class="c4" x="13" y="52" width="10" height="10"/><rect class="c2" x="26" y="52" width="10" height="10"/><rect class="c3" x="39" y="52" width="10" height="10"/><rect class="c4" x="52" y="52" width="10" height="10"/>
+    <rect class="c4" x="0"  y="65" width="10" height="10"/><rect class="c2" x="13" y="65" width="10" height="10"/><rect class="c4" x="26" y="65" width="10" height="10"/><rect class="c3" x="39" y="65" width="10" height="10"/><rect class="c4" x="52" y="65" width="10" height="10"/>
+  </g>
+
+  <!-- CLUSTER 4: Aug — peak burst -->
+  <g transform="translate(726,78)">
+    <rect class="clbx" x="-2" y="-1" width="56" height="98" rx="2"/>
+    <text x="0" y="-7" class="mono smg" font-size="8">COMMIT_CLUSTER 95.9%</text>
+    <rect class="c4" x="0"  y="0"  width="10" height="10"/><rect class="c4" x="13" y="0"  width="10" height="10"/><rect class="c3" x="26" y="0"  width="10" height="10"/><rect class="c4" x="39" y="0"  width="10" height="10"/>
+    <rect class="c3" x="0"  y="13" width="10" height="10"/><rect class="c4" x="13" y="13" width="10" height="10"/><rect class="c4" x="26" y="13" width="10" height="10"/><rect class="c3" x="39" y="13" width="10" height="10"/>
+    <rect class="c4" x="0"  y="26" width="10" height="10"/><rect class="c3" x="13" y="26" width="10" height="10"/><rect class="c4" x="26" y="26" width="10" height="10"/><rect class="c4" x="39" y="26" width="10" height="10"/>
+    <rect class="c4" x="0"  y="39" width="10" height="10"/><rect class="c4" x="13" y="39" width="10" height="10"/><rect class="c3" x="26" y="39" width="10" height="10"/><rect class="c4" x="39" y="39" width="10" height="10"/>
+    <rect class="c3" x="0"  y="52" width="10" height="10"/><rect class="c4" x="13" y="52" width="10" height="10"/><rect class="c4" x="26" y="52" width="10" height="10"/><rect class="c3" x="39" y="52" width="10" height="10"/>
+    <rect class="c4" x="0"  y="65" width="10" height="10"/><rect class="c4" x="13" y="65" width="10" height="10"/><rect class="c4" x="26" y="65" width="10" height="10"/><rect class="c4" x="39" y="65" width="10" height="10"/>
+    <rect class="c3" x="0"  y="78" width="10" height="10"/><rect class="c4" x="13" y="78" width="10" height="10"/><rect class="c4" x="26" y="78" width="10" height="10"/><rect class="c3" x="39" y="78" width="10" height="10"/>
+  </g>
+
+  <!-- Scanner sweep line -->
+  <g clip-path="url(#gridClip)">
+    <line class="scanner" x1="196" y1="66" x2="196" y2="196" stroke="url(#scanGrad)" stroke-width="2"/>
+  </g>
+
+  <!-- Console -->
+  <rect x="14" y="208" width="500" height="70" rx="3" fill="#020904" stroke="#0a2010" stroke-width="1"/>
+  <text x="24" y="224" class="mono smg c1t">&gt;&gt; FRAME: [53x7] | TARGET: shazamcodes64</text>
+  <text x="24" y="238" class="mono smg c2t">&gt;&gt; CCL_ENGINE: DETECTED 13 RAW CLUSTERS</text>
+  <text x="24" y="252" class="mono smg c3t">&gt;&gt; YOLOv8 COMMIT; STRETCHING 6 ROIs</text>
+  <text x="24" y="266" class="mono smg c4t">&gt;&gt; SCAN COMPLETED. ALL SYSTEMS NOMINAL.</text>
+
+  <!-- Legend -->
+  <text x="530" y="224" class="mono sm">INTENSITY_MAP:</text>
+  <rect x="530" y="232" width="8" height="8" class="c0" stroke="#0a2010" stroke-width="0.5"/>
+  <rect x="542" y="232" width="8" height="8" class="c1"/>
+  <rect x="554" y="232" width="8" height="8" class="c2"/>
+  <rect x="566" y="232" width="8" height="8" class="c3"/>
+  <rect x="578" y="232" width="8" height="8" class="c4" filter="url(#glow)"/>
+  <text x="590" y="240" class="mono sm">0  1-2  3-5  6-8  9+</text>
+
+  <rect x="530" y="250" width="8" height="6" fill="#00ff46" opacity="0.2" stroke="#00ff46" stroke-width="0.5"/>
+  <text x="542" y="256" class="mono smg" font-size="8">COMMIT_CLUSTER</text>
+  <rect x="648" y="250" width="8" height="6" class="c3"/>
+  <text x="660" y="256" class="mono smg" font-size="8">DEV_STREAK</text>
+  <rect x="730" y="250" width="8" height="6" class="c4" filter="url(#glow)"/>
+  <text x="742" y="256" class="mono smg" font-size="8">PEAK_BURST</text>
 </svg>
