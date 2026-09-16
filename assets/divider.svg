@@ -1,27 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="32" viewBox="0 0 1000 32">
   <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <!-- gradient for the traveling dot trail -->
+    <linearGradient id="dotTrail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00ff46" stop-opacity="0"/>
+      <stop offset="80%"  stop-color="#00ff46" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00ff46" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
   <!-- Left flat line -->
-  <line x1="0" y1="16" x2="320" y2="16" stroke="#00ff46" stroke-width="0.6" opacity="0.25"/>
+  <line x1="0" y1="16" x2="310" y2="16" stroke="#00ff46" stroke-width="0.6" opacity="0.2"/>
 
-  <!-- Signal pulse waveform center -->
+  <!-- Signal waveform center — all on one polyline so it's just a path, no copy button -->
   <polyline
-    points="320,16 348,16 356,4 364,28 372,4 380,28 388,16 400,16 408,10 416,22 424,10 432,22 440,16 460,16 468,8 476,24 484,8 492,24 500,16 508,16 516,10 524,22 532,10 540,22 548,16 560,16 568,4 576,28 584,4 592,28 600,16 612,16 620,10 628,22 636,10 644,22 652,16 680,16"
-    fill="none" stroke="#00ff46" stroke-width="1" opacity="0.5" filter="url(#glow)"/>
+    points="310,16 335,16 342,5 349,27 356,5 363,27 370,16 382,16 388,11 394,21 400,11 406,21 412,16 428,16 434,7 440,25 446,7 452,25 458,16 474,16 480,9 486,23 492,9 498,23 504,16 516,16 522,5 528,27 534,5 540,27 546,16 558,16 564,11 570,21 576,11 582,21 588,16 600,16 606,7 612,25 618,7 624,25 630,16 648,16 654,9 660,23 666,9 672,23 678,16 690,16"
+    fill="none" stroke="#00ff46" stroke-width="1.1" opacity="0.45" filter="url(#glow)"/>
 
   <!-- Right flat line -->
-  <line x1="680" y1="16" x2="1000" y2="16" stroke="#00ff46" stroke-width="0.6" opacity="0.25"/>
+  <line x1="690" y1="16" x2="1000" y2="16" stroke="#00ff46" stroke-width="0.6" opacity="0.2"/>
 
-  <!-- Animated traveling dot on the line -->
-  <circle r="2.5" fill="#00ff46" opacity="0.9" filter="url(#glow)">
-    <animateMotion dur="4s" repeatCount="indefinite">
-      <mpath href="#wavepath"/>
-    </animateMotion>
+  <!-- Traveling dot: uses animateTransform (GitHub-safe) -->
+  <circle cx="0" cy="16" r="2.8" fill="#00ff46" filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0,0"
+      to="1000,0"
+      dur="4.5s"
+      repeatCount="indefinite"/>
   </circle>
-  <path id="wavepath" d="M0,16 L320,16 L348,16 L356,4 L364,28 L372,4 L380,28 L388,16 L680,16 L1000,16" fill="none"/>
 </svg>

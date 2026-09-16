@@ -43,26 +43,23 @@ class ShazurRahman:
 
 ### `[ LOAD ]` — Toolbox
 
-```
-  ML / CV ──────────────────────────────────────────────
-```
+**`ML / CV`**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 
-```
-  WEB / APP ────────────────────────────────────────────
-```
+**`WEB / APP`**
+
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 
-```
-  PLATFORM ─────────────────────────────────────────────
-```
+**`PLATFORM`**
+
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
@@ -102,9 +99,9 @@ class ShazurRahman:
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=shazamcodes64&show_icons=true&theme=chartreuse-dark&hide_border=true&count_private=true&bg_color=060e08&title_color=00ff46&icon_color=00cc38&text_color=00aa30&border_radius=6" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api?username=shazamcodes64&show_icons=true&hide_border=true&count_private=true&bg_color=050e07&title_color=00ff46&icon_color=00cc38&text_color=18963a&ring_color=00ff46&border_radius=6" height="165"/>
 &nbsp;
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=shazamcodes64&theme=chartreuse-dark&hide_border=true&background=060e08&ring=00ff46&fire=00cc38&currStreakLabel=00ff46&border_radius=6" height="165"/>
+<img src="https://streak-stats.demolab.com?user=shazamcodes64&hide_border=true&background=050e07&ring=00ff46&fire=00cc38&currStreakLabel=00ff46&sideLabels=18963a&dates=18963a&sideNums=00ff46&currStreakNum=00ff46&border_radius=6" height="165"/>
 
 </div>
 
