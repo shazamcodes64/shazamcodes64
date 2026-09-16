@@ -78,6 +78,19 @@ class ShazurRahman:
 
 ---
 
+### 📸 Computer Vision HUD Contribution Grid
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=shazamcodes64&theme=react-dark&hide_border=true&area=true" width="100%"/>
+
+---
+
+### 💭 Quote I'm Coding By
+
+> *"Compatibility means deliberately repeating other people's mistakes."*
+> — David Wheeler (computer scientist)
+
+---
+
 ### 🤝 Let's build something
 
 [![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shazur-rahman/)
