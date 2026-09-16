@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+  <defs>
+    <style>
+      .bg { fill: #0d0e1a; }
+      .panel { fill: #12132a; stroke: #2a2c55; stroke-width: 1; }
+      .cyan { fill: #22d3ee; }
+      .mag { fill: #d946ef; }
+      .pink { fill: #f43f5e; }
+      .green { fill: #22c55e; }
+      .white { fill: #e5e7eb; }
+      .cell { fill: #1a1b33; }
+      .mono { font-family: 'Courier New', monospace; }
+      .lbl { fill: #7dd3fc; font-size: 11px; }
+      .val { fill: #a5b4fc; font-size: 20px; font-weight: bold; }
+      .small { fill: #64748b; font-size: 10px; }
+      .cluster { fill: none; stroke: #22c55e; stroke-width: 1; stroke-dasharray: 3,2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1000" height="300" rx="10"/>
+  <rect class="panel" x="15" y="15" width="970" height="270" rx="8"/>
+
+  <!-- Header -->
+  <text x="35" y="45" class="mono cyan" font-size="16" font-weight="bold">TARGET_DETECTION_HUD</text>
+  <text x="35" y="62" class="mono small">SENSOR_ARRAY: COMMIT_LOGS | CAM_01</text>
+  <circle cx="905" cy="42" r="4" class="green"/>
+  <text x="917" y="46" class="mono small" fill="#22c55e">SYS_ACTIVE</text>
+  <text x="855" y="60" class="mono small">TRACKER_LOCK: OK</text>
+  <line x1="35" y1="72" x2="965" y2="72" stroke="#2a2c55"/>
+
+  <!-- Left stat block -->
+  <text x="35" y="100" class="mono lbl">ROIs ACTIVE</text>
+  <text x="35" y="123" class="mono val mag">06</text>
+  <text x="35" y="145" class="mono lbl">TOTAL_COMMITS</text>
+  <text x="35" y="168" class="mono val cyan">538</text>
+  <text x="35" y="190" class="mono lbl">SCAN_STEPS</text>
+  <text x="35" y="213" class="mono val white">53 x 7 px</text>
+
+  <!-- Grid area: month labels -->
+  <g transform="translate(190,88)">
+    <text x="0" y="-10" class="mono small">Sep    Oct    Nov    Dec    Jan    Feb    Mar    Apr    May    Jun    Jul    Aug</text>
+
+    <!-- Block 1: Sep–Oct cluster (dense) -->
+    <rect class="cluster" x="-4" y="0" width="62" height="82" rx="4"/>
+    <text x="0" y="-18" fill="#22c55e" font-size="9" class="mono">COMMIT_CLUSTER 99.8%</text>
+    <rect class="cyan"  x="0"  y="0"  width="12" height="12"/>
+    <rect class="cell"  x="16" y="0"  width="12" height="12"/>
+    <rect class="mag"   x="32" y="0"  width="12" height="12"/>
+    <rect class="cell"  x="48" y="0"  width="12" height="12"/>
+    <rect class="white" x="0"  y="16" width="12" height="12"/>
+    <rect class="cell"  x="16" y="16" width="12" height="12"/>
+    <rect class="cyan"  x="32" y="16" width="12" height="12"/>
+    <rect class="pink"  x="48" y="16" width="12" height="12"/>
+    <rect class="cell"  x="0"  y="32" width="12" height="12"/>
+    <rect class="mag"   x="16" y="32" width="12" height="12"/>
+    <rect class="cell"  x="32" y="32" width="12" height="12"/>
+    <rect class="cyan"  x="48" y="32" width="12" height="12"/>
+    <rect class="cyan"  x="0"  y="48" width="12" height="12"/>
+    <rect class="cell"  x="16" y="48" width="12" height="12"/>
+    <rect class="white" x="32" y="48" width="12" height="12"/>
+    <rect class="cell"  x="48" y="48" width="12" height="12"/>
+    <rect class="cell"  x="0"  y="64" width="12" height="12"/>
+    <rect class="pink"  x="16" y="64" width="12" height="12"/>
+    <rect class="cell"  x="32" y="64" width="12" height="12"/>
+    <rect class="mag"   x="48" y="64" width="12" height="12"/>
+
+    <!-- Sparse months: Nov, Dec, Jan, Feb (minimal activity) -->
+    <g transform="translate(75,0)">
+      <rect class="cell" x="0"  y="16" width="12" height="12"/>
+      <rect class="cell" x="16" y="0"  width="12" height="12"/>
+      <rect class="cyan" x="32" y="32" width="12" height="12"/>
+      <rect class="cell" x="48" y="16" width="12" height="12"/>
+      <rect class="cell" x="0"  y="48" width="12" height="12"/>
+      <rect class="cell" x="64" y="0"  width="12" height="12"/>
+      <rect class="cell" x="80" y="32" width="12" height="12"/>
+      <rect class="cell" x="96" y="48" width="12" height="12"/>
+      <rect class="cell" x="112" y="16" width="12" height="12"/>
+      <rect class="mag"  x="128" y="0"  width="12" height="12"/>
+      <rect class="cell" x="144" y="48" width="12" height="12"/>
+    </g>
+
+    <!-- Block 2: Apr–May cluster -->
+    <g transform="translate(270,0)">
+      <rect class="cluster" x="-4" y="8" width="62" height="66" rx="4"/>
+      <text x="0" y="4" fill="#22c55e" font-size="9" class="mono">COMMIT_CLUSTER 96.4%</text>
+      <rect class="cyan"  x="0"  y="16" width="12" height="12"/>
+      <rect class="cell"  x="16" y="16" width="12" height="12"/>
+      <rect class="mag"   x="32" y="16" width="12" height="12"/>
+      <rect class="pink"  x="48" y="16" width="12" height="12"/>
+      <rect class="white" x="0"  y="32" width="12" height="12"/>
+      <rect class="cyan"  x="16" y="32" width="12" height="12"/>
+      <rect class="cell"  x="32" y="32" width="12" height="12"/>
+      <rect class="cyan"  x="48" y="32" width="12" height="12"/>
+      <rect class="cell"  x="0"  y="48" width="12" height="12"/>
+      <rect class="mag"   x="16" y="48" width="12" height="12"/>
+      <rect class="white" x="32" y="48" width="12" height="12"/>
+      <rect class="cell"  x="48" y="48" width="12" height="12"/>
+      <rect class="cyan"  x="0"  y="64" width="12" height="12"/>
+      <rect class="cell"  x="16" y="64" width="12" height="12"/>
+      <rect class="pink"  x="32" y="64" width="12" height="12"/>
+      <rect class="cell"  x="48" y="64" width="12" height="12"/>
+    </g>
+
+    <!-- Block 3: Jun–Aug peak cluster -->
+    <g transform="translate(360,0)">
+      <rect class="cluster" x="-4" y="0" width="78" height="82" rx="4"/>
+      <text x="0" y="-18" fill="#22c55e" font-size="9" class="mono">COMMIT_CLUSTER 95.9%</text>
+      <rect class="mag"   x="0"  y="0"  width="12" height="12"/>
+      <rect class="cyan"  x="16" y="0"  width="12" height="12"/>
+      <rect class="white" x="32" y="0"  width="12" height="12"/>
+      <rect class="pink"  x="48" y="0"  width="12" height="12"/>
+      <rect class="cyan"  x="64" y="0"  width="12" height="12"/>
+      <rect class="cell"  x="0"  y="16" width="12" height="12"/>
+      <rect class="white" x="16" y="16" width="12" height="12"/>
+      <rect class="mag"   x="32" y="16" width="12" height="12"/>
+      <rect class="cyan"  x="48" y="16" width="12" height="12"/>
+      <rect class="cell"  x="64" y="16" width="12" height="12"/>
+      <rect class="cyan"  x="0"  y="32" width="12" height="12"/>
+      <rect class="pink"  x="16" y="32" width="12" height="12"/>
+      <rect class="cell"  x="32" y="32" width="12" height="12"/>
+      <rect class="white" x="48" y="32" width="12" height="12"/>
+      <rect class="mag"   x="64" y="32" width="12" height="12"/>
+      <rect class="white" x="0"  y="48" width="12" height="12"/>
+      <rect class="cell"  x="16" y="48" width="12" height="12"/>
+      <rect class="cyan"  x="32" y="48" width="12" height="12"/>
+      <rect class="mag"   x="48" y="48" width="12" height="12"/>
+      <rect class="pink"  x="64" y="48" width="12" height="12"/>
+      <rect class="cyan"  x="0"  y="64" width="12" height="12"/>
+      <rect class="mag"   x="16" y="64" width="12" height="12"/>
+      <rect class="white" x="32" y="64" width="12" height="12"/>
+      <rect class="cell"  x="48" y="64" width="12" height="12"/>
+      <rect class="cyan"  x="64" y="64" width="12" height="12"/>
+    </g>
+  </g>
+
+  <!-- Bottom console -->
+  <rect x="35" y="230" width="560" height="50" fill="#0a0b16" stroke="#2a2c55"/>
+  <text x="45" y="245" class="mono small" fill="#22c55e">&gt;&gt; FRAME: [53x7] | TARGET: shazamcodes64</text>
+  <text x="45" y="258" class="mono small" fill="#22c55e">&gt;&gt; CCL_ENGINE: DETECTED 13 RAW CLUSTERS</text>
+  <text x="45" y="271" class="mono small" fill="#22c55e">&gt;&gt; YOLOv8 COMMIT; STRETCHING 6 ROIs</text>
+
+  <!-- Legend -->
+  <text x="700" y="245" class="mono small">INTENSITY_MAP:</text>
+  <rect x="700" y="252" width="10" height="10" class="cell"/>
+  <rect x="715" y="252" width="10" height="10" fill="#22d3ee" opacity="0.4"/>
+  <rect x="730" y="252" width="10" height="10" class="cyan"/>
+  <rect x="745" y="252" width="10" height="10" class="mag"/>
+  <rect x="760" y="252" width="10" height="10" class="pink"/>
+  <text x="773" y="261" class="mono small">0  LOW  MED  HIGH  PEAK</text>
+
+  <!-- Legend labels -->
+  <rect x="700" y="270" width="10" height="8" fill="#22c55e" opacity="0.3"/>
+  <text x="715" y="277" class="mono small" fill="#22c55e">COMMIT_CLUSTER</text>
+  <rect x="810" y="270" width="10" height="8" class="cyan"/>
+  <text x="825" y="277" class="mono small" fill="#22d3ee">DEV_STREAK</text>
+  <rect x="895" y="270" width="10" height="8" class="pink"/>
+  <text x="909" y="277" class="mono small" fill="#f43f5e">PEAK_BURST</text>
+</svg>
