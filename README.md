@@ -1,8 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6366f1,100:a855f7&height=200&section=header&text=Shazur%20Rahman&fontSize=42&fontColor=ffffff&desc=Computer%20Vision%20·%20Machine%20Learning%20·%20Builder&descSize=18&descAlignY=58&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a56db,50:6366f1,100:a855f7&height=220&section=header&text=Shazur%20Rahman&fontSize=46&fontColor=ffffff&fontAlignY=42&desc=Computer%20Vision%20·%20Machine%20Learning%20·%20Builder&descSize=17&descAlignY=62&animation=fadeIn" width="100%"/>
 
-<br>
+<br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&width=600&lines=Cameras%2C+models%2C+pixels%2C+insight.;Ship+the+demo.+Iterate+from+there.;CV+%7C+ML+%7C+Builder+%F0%9F%87%AE%F0%9F%87%B3)](https://git.io/typing-svg)
+
+<br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Shazur--Rahman-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shazur-rahman/)
 [![Email](https://img.shields.io/badge/Gmail-shazurrahman2007-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shazurrahman2007@gmail.com)
@@ -56,7 +60,7 @@ class ShazurRahman:
 
 ### 🚧 Currently Building
 
-🎯 **[Gaze Tracking System](#)** — a real-time eye-tracking and attention-heatmap platform. Combines OpenCV face/eye landmark detection with session-level attention heatmaps for analytics.
+> 🎯 **[Gaze Tracking System](#)** — a real-time eye-tracking and attention-heatmap platform with a mobile-friendly clinician login flow. Combines OpenCV face/eye landmarks with a React analytics dashboard for session-level insights.
 
 ---
 
@@ -64,7 +68,7 @@ class ShazurRahman:
 
 | Project | Stack | Description |
 |---|---|---|
-| 👁️ **Gaze Tracking System** | Python · OpenCV | Real-time eye tracking with session-based attention heatmaps. |
+| 👁️ **Gaze Tracking System** | Python · OpenCV · React | Real-time eye tracking with session-based attention heatmaps and a mobile-friendly clinician login flow. |
 | 🅿️ **AAPS — Autonomous AI Parking System** | Flutter · FastAPI · PostgreSQL | Driver-facing app for an AI-driven autonomous parking system, with full SRS/TDD/UI-UX spec and sprint-planned backlog. |
 | 🏔️ **Landslide Susceptibility Prediction (IGC 2026)** | Python · ML | Comparative ML framework (Logistic Regression, SVM, Random Forest, XGBoost) for landslide susceptibility. Provisionally accepted at IGC 2026. |
 | 🌄 **Explainable AI Smart Tourism System** | Python · GBM/LSTM · SHAP | UROP research — visitor demand prediction and recommendation for tourism, with explainability via SHAP. |
@@ -77,6 +81,7 @@ class ShazurRahman:
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=shazamcodes64&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="160"/>
+&nbsp;&nbsp;
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=shazamcodes64&theme=tokyonight&hide_border=true" height="160"/>
 
 </div>
@@ -91,8 +96,13 @@ class ShazurRahman:
 
 ### 💭 Quote I'm Coding By
 
-> *"Compatibility means deliberately repeating other people's mistakes."*  
-> — David Wheeler (computer scientist)
+<div align="center">
+
+> *"If you start removing things, if you get to the point where if you were to remove anything more it would not work any more — at this point it is beautiful."*
+>
+> — Joe Armstrong (programmer)
+
+</div>
 
 ---
 
@@ -104,8 +114,10 @@ class ShazurRahman:
 [![Email](https://img.shields.io/badge/EMAIL-Say%20Hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shazurrahman2007@gmail.com)
 [![GitHub](https://img.shields.io/badge/GITHUB-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shazamcodes64)
 
+<br/>
+
 ⭐ If a project caught your eye, a star goes a long way.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=120&section=footer" width="100%"/>
 
 </div>
