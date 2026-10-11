@@ -31,7 +31,7 @@ class ShazurRahman:
         self.role       = "CSE (Computational Intelligence) undergrad · ML/CV Builder"
         self.location   = "Tamil Nadu, India 🇮🇳"
         self.stack      = ["Python", "Flutter", "FastAPI", "OpenCV", "PyTorch"]
-        self.building   = "Gaze Tracking System — real-time eye tracking & attention heatmaps"
+        self.building   = "#OpenToWork — looking for opportunities"
         self.exploring  = ["Explainable AI", "Autonomous systems", "Applied ML research"]
         self.philosophy = "Ship the demo. Iterate from there."
 
@@ -70,12 +70,12 @@ class ShazurRahman:
 ### `[ PROCESS ]` — Currently Building
 
 ```
-  >> ACTIVE_JOB: Gaze Tracking System
-  >> STATUS    : IN_PROGRESS
-  >> ETA       : shipping soon
+  >> ACTIVE_JOB: Open To Work
+  >> STATUS    : SEEKING_OPPORTUNITIES
+  >> ROLES     : ML Engineer · CV Engineer · Full-Stack
 ```
 
-> 🎯 **[Gaze Tracking System](#)** — real-time eye-tracking and attention-heatmap platform with a mobile-friendly clinician login flow. Combines OpenCV face/eye landmarks with a React analytics dashboard for session-level insights.
+> 🧿 **[AURA — Autism Risk Assessment](https://github.com/shazamcodes64/AURA-APP)** — gaze-based autism screening using only the device camera. Android and desktop apps that score gaze patterns into a clinician-facing report.
 
 <img src="assets/divider.svg" width="100%"/>
 
@@ -87,11 +87,11 @@ class ShazurRahman:
 
 | `#` | Project | Stack | Description |
 |---|---|---|---|
-| `01` | 👁️ **Gaze Tracking System** | Python · OpenCV · React | Real-time eye tracking with session-based attention heatmaps. |
-| `02` | 🅿️ **AAPS — Autonomous AI Parking** | Flutter · FastAPI · PostgreSQL | AI-driven parking system with full SRS/TDD spec and sprint backlog. |
-| `03` | 🏔️ **Landslide Susceptibility (IGC 2026)** | Python · ML | Comparative ML framework for landslide susceptibility. Provisionally accepted at IGC 2026. |
-| `04` | 🌄 **Explainable AI Smart Tourism** | Python · GBM/LSTM · SHAP | UROP research — visitor demand prediction with SHAP explainability. |
-| `05` | 🎮 **Nova Drift — Web Game Portal** | Three.js · JavaScript | 3D endless dodge game with a game-hub portal interface. |
+| `01` | 🧿 **[AURA — Autism Risk Assessment](https://github.com/shazamcodes64/AURA-APP)** | Flutter · React · TypeScript · MediaPipe · Supabase | Gaze-based autism screening using only the device camera — Android and desktop apps that score gaze patterns into a clinician-facing report. |
+| `02` | 📋 **[Kanban Task Management](https://github.com/shazamcodes64/gdg-srm-kanban)** | React · TypeScript | Drag-and-drop kanban board with To Do / In Progress / Done stages, toast notifications and auto-save. |
+| `03` | 🤖 **[Campus AI Assistant](https://github.com/shazamcodes64/Campus-AI-Assistant)** | Python · Ollama · FAISS · RAG | On-prem, privacy-first campus assistant using a hybrid FAQ matcher + RAG pipeline with source citations. |
+| `04` | 🎮 **[Nova Drift — Web Game Portal](https://github.com/shazamcodes64/nova-drift)** | Three.js · JavaScript | 3D endless dodge game with a game-hub portal interface. |
+| `05` | 💬 **[Reddit Clone](https://github.com/shazamcodes64/Reddit-clone)** | Next.js · TypeScript · Prisma | Full-stack Reddit-style platform with AI moderation, nested comments, communities and a moderator dashboard. |
 
 <img src="assets/divider.svg" width="100%"/>
 
@@ -120,11 +120,11 @@ class ShazurRahman:
 ```
   ┌─────────────────────────────────────────────────────────────────────┐
   │                                                                     │
-  │   "If you start removing things, if you get to the point where      │
-  │    if you were to remove anything more it would not work any        │
-  │    more — at this point it is beautiful."                           │
+  │   "Compatibility means deliberately repeating other people's        │
+  │    mistakes."                                                       │
   │                                                                     │
-  │                                       — Joe Armstrong (programmer)  │
+  │                                      — David Wheeler (computer      │
+  │                                        scientist)                   │
   │                                                                     │
   └─────────────────────────────────────────────────────────────────────┘
 ```
