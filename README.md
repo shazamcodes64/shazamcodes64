@@ -101,7 +101,7 @@ class ShazurRahman:
 
 ### `[ OUTPUT ]` — Selected Work
 
-> `>> SCANNING REPO...` 5 objects detected.
+<div><sub>&gt;&gt; SCANNING_REPO: &nbsp; 5 objects detected.</sub></div>
 
 | `#` | Project | Stack | Description |
 |---|---|---|---|
