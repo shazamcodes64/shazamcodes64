@@ -15,15 +15,19 @@
 
 </div>
 
-<img src="assets/divider.svg" width="100%"/>
-
-<div align="center">
-
-![Pipeline](https://img.shields.io/badge/PIPELINE-INIT_→_PROCESS_→_TRANSMIT-0a1a0c?style=for-the-badge&logoColor=00ff46)
-
-</div>
+<br/>
 
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
+
+<div align="center"><sub>PIPELINE &nbsp;›&nbsp; INIT → PROCESS → TRANSMIT</sub></div>
+
+<br/>
+
+<img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ INIT ]` — whoami
 
@@ -41,11 +45,15 @@ class ShazurRahman:
         return ["computer vision", "applied ML", "autonomous systems"]
 ```
 
+<br/>
+
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ LOAD ]` — Toolbox
 
-![ML/CV](https://img.shields.io/badge/─────────-ML_/_CV-0a1a0c?style=flat-square&logoColor=00ff46)
+<sub>**◈ ML / CV**</sub>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
@@ -53,29 +61,43 @@ class ShazurRahman:
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 
-![Web/App](https://img.shields.io/badge/─────────-WEB_/_APP-0a1a0c?style=flat-square&logoColor=00ff46)
+<sub>**◈ WEB / APP**</sub>
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 
-![Platform](https://img.shields.io/badge/─────────-PLATFORM-0a1a0c?style=flat-square&logoColor=00ff46)
+<sub>**◈ PLATFORM**</sub>
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
 
+<br/>
+
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ PROCESS ]` — Currently Building
 
-> `>> ACTIVE_JOB:` Open To Work &nbsp;&nbsp; `>> STATUS:` SEEKING_OPPORTUNITIES &nbsp;&nbsp; `>> ROLES:` ML Engineer · CV Engineer · Full-Stack
+<div>
+<sub>&gt;&gt; ACTIVE_JOB: &nbsp; Open To Work</sub><br/>
+<sub>&gt;&gt; STATUS: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEEKING_OPPORTUNITIES</sub><br/>
+<sub>&gt;&gt; ROLES: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ML Engineer · CV Engineer · Full-Stack</sub>
+</div>
 
-> 🧿 **[AURA — Autism Risk Assessment](https://github.com/shazamcodes64/AURA-APP)** — gaze-based autism screening using only the device camera. Android and desktop apps that score gaze patterns into a clinician-facing report.
+<br/>
+
+🧿 **[AURA — Autism Risk Assessment](https://github.com/shazamcodes64/AURA-APP)** — gaze-based autism screening using only the device camera. Android and desktop apps that score gaze patterns into a clinician-facing report.
+
+<br/>
 
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ OUTPUT ]` — Selected Work
 
@@ -89,7 +111,11 @@ class ShazurRahman:
 | `04` | 🎮 **[Nova Drift — Web Game Portal](https://github.com/shazamcodes64/nova-drift)** | Three.js · JavaScript | 3D endless dodge game with a game-hub portal interface. |
 | `05` | 💬 **[Reddit Clone](https://github.com/shazamcodes64/Reddit-clone)** | Next.js · TypeScript · Prisma | Full-stack Reddit-style platform with AI moderation, nested comments, communities and a moderator dashboard. |
 
+<br/>
+
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ METRICS ]` — GitHub in Numbers
 
@@ -101,13 +127,21 @@ class ShazurRahman:
 
 </div>
 
+<br/>
+
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ RENDER ]` — Computer Vision HUD
 
 <img src="assets/cv-hud.svg" width="100%"/>
 
+<br/>
+
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ LOG ]` — Quote I'm Coding By
 
@@ -119,7 +153,11 @@ class ShazurRahman:
 
 </div>
 
+<br/>
+
 <img src="assets/divider.svg" width="100%"/>
+
+<br/>
 
 ### `[ TRANSMIT ]` — Let's build something
 
@@ -128,12 +166,11 @@ class ShazurRahman:
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a1a0c?style=for-the-badge&logo=linkedin&logoColor=00ff46)](https://www.linkedin.com/in/shazur-rahman/)
 [![Email](https://img.shields.io/badge/EMAIL-Say%20Hi-0a1a0c?style=for-the-badge&logo=gmail&logoColor=00ff46)](mailto:shazurrahman2007@gmail.com)
 [![GitHub](https://img.shields.io/badge/GITHUB-Follow-0a1a0c?style=for-the-badge&logo=github&logoColor=00ff46)](https://github.com/shazamcodes64)
+[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=shazamcodes64.shazamcodes64&style=for-the-badge&color=0a1a0c&labelColor=0a1a0c)](https://github.com/shazamcodes64)
 
 <br/>
 
 ⭐ &nbsp; *If a project caught your eye, a star goes a long way.*
-
-![end](https://img.shields.io/badge/>>-END__OF__TRANSMISSION-0a1a0c?style=flat-square&logoColor=00ff46)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:050e07,50:0a2010,100:050e07&height=100&section=footer" width="100%"/>
 
