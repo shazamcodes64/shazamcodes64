@@ -8,20 +8,22 @@
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/%20LINKEDIN-Shazur--Rahman-0d1f0f?style=for-the-badge&logo=linkedin&logoColor=00ff46&labelColor=0a1a0c&color=0a1a0c)](https://www.linkedin.com/in/shazur-rahman/)
-[![Email](https://img.shields.io/badge/%20EMAIL-shazurrahman2007-0d1f0f?style=for-the-badge&logo=gmail&logoColor=00ff46&labelColor=0a1a0c&color=0a1a0c)](mailto:shazurrahman2007@gmail.com)
-[![GitHub](https://img.shields.io/badge/%20GITHUB-shazamcodes64-0d1f0f?style=for-the-badge&logo=github&logoColor=00ff46&labelColor=0a1a0c&color=0a1a0c)](https://github.com/shazamcodes64)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-Shazur--Rahman-0a1a0c?style=for-the-badge&logo=linkedin&logoColor=00ff46)](https://www.linkedin.com/in/shazur-rahman/)
+[![Email](https://img.shields.io/badge/EMAIL-shazurrahman2007-0a1a0c?style=for-the-badge&logo=gmail&logoColor=00ff46)](mailto:shazurrahman2007@gmail.com)
+[![GitHub](https://img.shields.io/badge/GITHUB-shazamcodes64-0a1a0c?style=for-the-badge&logo=github&logoColor=00ff46)](https://github.com/shazamcodes64)
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=shazamcodes64.shazamcodes64&style=for-the-badge&color=0a1a0c&labelColor=0a1a0c)](https://github.com/shazamcodes64)
 
 </div>
 
 <img src="assets/divider.svg" width="100%"/>
 
-```
-╔══════════════════════════════════════════╗
-║  PIPELINE  ›  INIT → PROCESS → TRANSMIT  ║
-╚══════════════════════════════════════════╝
-```
+<div align="center">
+
+![Pipeline](https://img.shields.io/badge/PIPELINE-INIT_→_PROCESS_→_TRANSMIT-0a1a0c?style=for-the-badge&logoColor=00ff46)
+
+</div>
+
+<img src="assets/divider.svg" width="100%"/>
 
 ### `[ INIT ]` — whoami
 
@@ -43,7 +45,7 @@ class ShazurRahman:
 
 ### `[ LOAD ]` — Toolbox
 
-**`ML / CV`**
+![ML/CV](https://img.shields.io/badge/─────────-ML_/_CV-0a1a0c?style=flat-square&logoColor=00ff46)
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
@@ -51,14 +53,14 @@ class ShazurRahman:
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 
-**`WEB / APP`**
+![Web/App](https://img.shields.io/badge/─────────-WEB_/_APP-0a1a0c?style=flat-square&logoColor=00ff46)
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 
-**`PLATFORM`**
+![Platform](https://img.shields.io/badge/─────────-PLATFORM-0a1a0c?style=flat-square&logoColor=00ff46)
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
@@ -69,11 +71,7 @@ class ShazurRahman:
 
 ### `[ PROCESS ]` — Currently Building
 
-```
-  >> ACTIVE_JOB: Open To Work
-  >> STATUS    : SEEKING_OPPORTUNITIES
-  >> ROLES     : ML Engineer · CV Engineer · Full-Stack
-```
+> `>> ACTIVE_JOB:` Open To Work &nbsp;&nbsp; `>> STATUS:` SEEKING_OPPORTUNITIES &nbsp;&nbsp; `>> ROLES:` ML Engineer · CV Engineer · Full-Stack
 
 > 🧿 **[AURA — Autism Risk Assessment](https://github.com/shazamcodes64/AURA-APP)** — gaze-based autism screening using only the device camera. Android and desktop apps that score gaze patterns into a clinician-facing report.
 
@@ -81,9 +79,7 @@ class ShazurRahman:
 
 ### `[ OUTPUT ]` — Selected Work
 
-```
-  >> SCANNING REPO... 5 objects detected.
-```
+> `>> SCANNING REPO...` 5 objects detected.
 
 | `#` | Project | Stack | Description |
 |---|---|---|---|
@@ -117,17 +113,9 @@ class ShazurRahman:
 
 <div align="center">
 
-```
-  ┌─────────────────────────────────────────────────────────────────────┐
-  │                                                                     │
-  │   "Compatibility means deliberately repeating other people's        │
-  │    mistakes."                                                       │
-  │                                                                     │
-  │                                      — David Wheeler (computer      │
-  │                                        scientist)                   │
-  │                                                                     │
-  └─────────────────────────────────────────────────────────────────────┘
-```
+> *"Compatibility means deliberately repeating other people's mistakes."*
+>
+> — David Wheeler (computer scientist)
 
 </div>
 
@@ -143,10 +131,10 @@ class ShazurRahman:
 
 <br/>
 
-```
-  ⭐  If a project caught your eye, a star goes a long way.
-  ──────────────────────────────────────────────────────
-  >> END_OF_TRANSMISSION
-```
+⭐ &nbsp; *If a project caught your eye, a star goes a long way.*
+
+![end](https://img.shields.io/badge/>>-END__OF__TRANSMISSION-0a1a0c?style=flat-square&logoColor=00ff46)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050e07,50:0a2010,100:050e07&height=100&section=footer" width="100%"/>
 
 </div>
