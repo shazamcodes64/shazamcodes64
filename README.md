@@ -166,7 +166,6 @@ class ShazurRahman:
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a1a0c?style=for-the-badge&logo=linkedin&logoColor=00ff46)](https://www.linkedin.com/in/shazur-rahman/)
 [![Email](https://img.shields.io/badge/EMAIL-Say%20Hi-0a1a0c?style=for-the-badge&logo=gmail&logoColor=00ff46)](mailto:shazurrahman2007@gmail.com)
 [![GitHub](https://img.shields.io/badge/GITHUB-Follow-0a1a0c?style=for-the-badge&logo=github&logoColor=00ff46)](https://github.com/shazamcodes64)
-[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=shazamcodes64.shazamcodes64&style=for-the-badge&color=0a1a0c&labelColor=0a1a0c)](https://github.com/shazamcodes64)
 
 <br/>
 
